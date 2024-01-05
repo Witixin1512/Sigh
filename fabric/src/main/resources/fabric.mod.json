@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "sigh",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "sources": "https://github.com/Witixin1512/Sigh"
+  },
+  "license": "${license}",
+  "icon": "assets/modid/${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.witixin.sigh.SighFabric"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}_fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
+  
