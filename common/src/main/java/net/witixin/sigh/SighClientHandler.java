@@ -10,7 +10,6 @@ public class SighClientHandler {
 
     public static void handleHeadShaking(LivingEntity entity, float bob, float partialTick, EntityModel<? extends LivingEntity> model){
         boolean stopShaking = SighCommon.increaseShakingTime(entity, partialTick);
-
         if(model instanceof AgeableListModel ageableListModel) {
             for(ModelPart part : ((AgeableListPartsInvoker) ageableListModel).getHeadParts()) {
                shakePart(part, stopShaking, bob);
@@ -27,9 +26,6 @@ public class SighClientHandler {
             shakePart(rabbitModel.nose, stopShaking, bob);
             shakePart(rabbitModel.leftEar, stopShaking, bob);
             shakePart(rabbitModel.rightEar, stopShaking, bob);
-        }
-        else {
-            //Here the mod handles other special renderers, such as GeckoLib's
         }
     }
 

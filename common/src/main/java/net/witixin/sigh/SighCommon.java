@@ -51,9 +51,5 @@ public class SighCommon {
         timeSpentShaking.put(livingEntity.getId(), 0);
     }
 
-    private static void removeMob(final Mob mob){
-        entitiesToShake.remove(mob.getId());
-    }
-
 
 }
