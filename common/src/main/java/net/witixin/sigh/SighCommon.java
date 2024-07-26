@@ -44,7 +44,7 @@ public class SighCommon {
     }
 
     public static void onFriendDie(LivingEntity livingEntity){
-        if(!livingEntity.isSilent()) {
+        if(!livingEntity.isSilent() && SighConstants.PLATFORM.shouldPlaySound()) {
             livingEntity.playSound(SoundEvents.VILLAGER_NO, 16.0f, 1.0F);
         }
         shakeHead(livingEntity);

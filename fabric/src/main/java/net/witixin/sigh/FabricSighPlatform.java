@@ -7,4 +7,9 @@ public class FabricSighPlatform implements SighPlatform {
     public boolean isModLoaded(String modid){
         return FabricLoader.getInstance().isModLoaded(modid);
     }
+
+    @Override
+    public boolean shouldPlaySound(){
+        return SighConfig.shouldPlayVillagerSighSound;
+    }
 }

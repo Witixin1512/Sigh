@@ -8,4 +8,9 @@ public class SighPlatformForge implements SighPlatform {
     public boolean isModLoaded(String modid){
         return ModList.get().isLoaded(modid) || LoadingModList.get().getModFileById(modid) != null;
     }
+
+    @Override
+    public boolean shouldPlaySound(){
+        return SighForge.SHOULD_PLAY_SOUND.get();
+    }
 }

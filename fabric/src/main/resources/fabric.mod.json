@@ -14,7 +14,7 @@
   "icon": "assets/modid/${mod_id}.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
+    "client": [
       "net.witixin.sigh.SighFabric"
     ]
   },

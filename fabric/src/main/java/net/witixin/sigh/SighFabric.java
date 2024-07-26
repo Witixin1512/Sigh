@@ -1,11 +1,12 @@
 package net.witixin.sigh;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.world.entity.EntityEvent;
+import eu.midnightdust.lib.config.MidnightConfig;
+import net.fabricmc.api.ClientModInitializer;
 
-public class SighFabric implements ModInitializer {
+public class SighFabric implements ClientModInitializer {
 
     @Override
-    public void onInitialize(){
+    public void onInitializeClient() {
+        MidnightConfig.init(SighConstants.MOD_ID, SighConfig.class);
     }
 }
