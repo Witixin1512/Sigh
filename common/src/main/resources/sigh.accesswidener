@@ -4,3 +4,4 @@ accessible field net/minecraft/client/model/RabbitModel head Lnet/minecraft/clie
 accessible field net/minecraft/client/model/RabbitModel nose Lnet/minecraft/client/model/geom/ModelPart;
 accessible field net/minecraft/client/model/RabbitModel leftEar Lnet/minecraft/client/model/geom/ModelPart;
 accessible field net/minecraft/client/model/RabbitModel rightEar Lnet/minecraft/client/model/geom/ModelPart;
+accessible field net/minecraft/client/renderer/entity/layers/DrownedOuterLayer DROWNED_OUTER_LAYER_LOCATION Lnet/minecraft/resources/ResourceLocation;

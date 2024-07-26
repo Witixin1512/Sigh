@@ -9,5 +9,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface AgeableListPartsInvoker {
 
     @Invoker("headParts")
-    public Iterable<ModelPart> getHeadParts();
+    Iterable<ModelPart> getHeadParts();
 }

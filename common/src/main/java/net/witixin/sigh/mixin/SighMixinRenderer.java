@@ -33,7 +33,8 @@ public abstract class SighMixinRenderer extends EntityRenderer {
     @Inject(method = "Lnet/minecraft/client/renderer/entity/LivingEntityRenderer;render(Lnet/minecraft/world/entity/LivingEntity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/EntityModel;setupAnim(Lnet/minecraft/world/entity/Entity;FFFFF)V", shift = At.Shift.AFTER))
     private void sigh_injectAfterSetupAnim(LivingEntity entity, float $$1, float partialTick, PoseStack $$3, MultiBufferSource $$4, int $$5, CallbackInfo callbackInfo){
         if(SighCommon.shouldMobShakeHead(entity)) {
-            SighClientHandler.handleHeadShaking(entity, getBob(entity, partialTick), partialTick, getModel());
+            boolean stopShaking = SighCommon.increaseShakingTime(entity, partialTick);
+            SighClientHandler.handleHeadShaking(entity, getBob(entity, partialTick), partialTick, getModel(), stopShaking);
 
         }
     }

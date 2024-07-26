@@ -26,6 +26,10 @@ public class SighCommon {
         return entitiesToShake.contains(mob.getId());
     }
 
+    public static boolean shouldResetPart(final LivingEntity mob) {
+        return timeSpentShaking.get(mob.getId()) == 99;
+    }
+
     public static boolean increaseShakingTime(LivingEntity livingEntity, float partialTick){
         if(partialTick - 1.0f > 0.001) return false;
         int mobId = livingEntity.getId();

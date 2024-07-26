@@ -8,8 +8,8 @@ import net.witixin.sigh.mixin.AgeableListPartsInvoker;
 
 public class SighClientHandler {
 
-    public static void handleHeadShaking(LivingEntity entity, float bob, float partialTick, EntityModel<? extends LivingEntity> model){
-        boolean stopShaking = SighCommon.increaseShakingTime(entity, partialTick);
+    public static void handleHeadShaking(LivingEntity entity, float bob, float partialTick, EntityModel<? extends LivingEntity> model,
+                                         boolean stopShaking){
         if(model instanceof AgeableListModel ageableListModel) {
             for(ModelPart part : ((AgeableListPartsInvoker) ageableListModel).getHeadParts()) {
                shakePart(part, stopShaking, bob);
