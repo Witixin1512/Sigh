@@ -9,7 +9,7 @@
   "client": [
     "SighMixinRenderer",
     "AgeableListPartsInvoker",
-    "DrownedSetupAnimMixin"
+    "FixRenderLayersMixin"
   ],
   "server": [
   ],
