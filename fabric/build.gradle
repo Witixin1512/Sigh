@@ -27,7 +27,6 @@ dependencies {
     implementation project(":common")
     modImplementation("maven.modrinth:midnightlib:${midnightlib_version}")
     include("maven.modrinth:midnightlib:${midnightlib_version}")
-    modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
 }
 
 loom {
