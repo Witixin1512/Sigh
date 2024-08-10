@@ -11,20 +11,14 @@ import java.util.Set;
 
 public class SighClientHandler {
 
-    public static final Set<ResourceLocation> KNOWN_VANILLA_RENDER_LAYERS = Set.of(new ResourceLocation("textures/entity/zombie" +
-            "/drowned_outer_layer.png"), new ResourceLocation("textures/entity/skeleton/stray_overlay.png"), new ResourceLocation("textures/entity/sheep/sheep_fur.png"),
-            new ResourceLocation("textures" + "/entity/fish/tropical_a_pattern_1.png"), new ResourceLocation("textures/entity/fish" +
-                    "/tropical_a_pattern_2.png"), new ResourceLocation("textures/entity/fish/tropical_a_pattern_3.png"),
-            new ResourceLocation("textures/entity/fish" + "/tropical_a_pattern_4.png"), new ResourceLocation("textures/entity/fish" +
-                    "/tropical_a_pattern_5.png"), new ResourceLocation("textures/entity/fish/tropical_a_pattern_6.png"),
-            new ResourceLocation("textures/entity/fish" + "/tropical_b_pattern_1.png"), new ResourceLocation("textures/entity/fish" +
-                    "/tropical_b_pattern_2.png"), new ResourceLocation("textures/entity/fish/tropical_b_pattern_3.png"),
-            new ResourceLocation("textures/entity/fish" + "/tropical_b_pattern_4.png"), new ResourceLocation("textures/entity/fish" +
-                    "/tropical_b_pattern_5.png"), new ResourceLocation("textures/entity/fish/tropical_b_pattern_6.png"),
+    public static final Set<ResourceLocation> KNOWN_VANILLA_RENDER_LAYERS = Set.of(
+            new ResourceLocation("textures/entity/zombie/drowned_outer_layer.png"),
+            new ResourceLocation("textures/entity/skeleton/stray_overlay.png"),
+            new ResourceLocation("textures/entity/sheep/sheep_fur.png"),
             new ResourceLocation("textures/entity/wolf/wolf_collar.png")
             );
 
-    public static void handleHeadShaking(LivingEntity entity, float bob, float partialTick, EntityModel<? extends LivingEntity> model,
+    public static void handleHeadShaking(float bob, EntityModel<? extends LivingEntity> model,
                                          boolean stopShaking){
         if(model instanceof AgeableListModel ageableListModel) {
             for(ModelPart part : ((AgeableListPartsInvoker) ageableListModel).getHeadParts()) {

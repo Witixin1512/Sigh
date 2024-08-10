@@ -34,7 +34,7 @@ public abstract class SighMixinRenderer extends EntityRenderer {
     private void sigh_injectAfterSetupAnim(LivingEntity entity, float $$1, float partialTick, PoseStack $$3, MultiBufferSource $$4, int $$5, CallbackInfo callbackInfo){
         if(SighCommon.shouldMobShakeHead(entity)) {
             boolean stopShaking = SighCommon.increaseShakingTime(entity, partialTick);
-            SighClientHandler.handleHeadShaking(entity, getBob(entity, partialTick), partialTick, getModel(), stopShaking);
+            SighClientHandler.handleHeadShaking(getBob(entity, partialTick), getModel(), stopShaking);
 
         }
     }
