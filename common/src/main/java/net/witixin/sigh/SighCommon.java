@@ -5,7 +5,6 @@ import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,24 +21,24 @@ public class SighCommon {
     private static final Set<Integer> entitiesToShake = new HashSet<>();
     private static final Int2IntMap timeSpentShaking = new Int2IntOpenHashMap();
 
-    public static boolean shouldMobShakeHead(final LivingEntity mob){
-        return entitiesToShake.contains(mob.getId());
+    public static boolean shouldMobShakeHead(final LivingEntity livingEntity){
+        return entitiesToShake.contains(livingEntity.getId());
     }
 
-    public static boolean shouldResetPart(final LivingEntity mob) {
-        return timeSpentShaking.get(mob.getId()) == 99;
+    public static boolean shouldResetPart(final LivingEntity livingEntity) {
+        return timeSpentShaking.get(livingEntity.getId()) == 99;
     }
 
     public static boolean increaseShakingTime(LivingEntity livingEntity, float partialTick){
         if(partialTick - 1.0f > 0.001) return false;
-        int mobId = livingEntity.getId();
-        int amount = timeSpentShaking.get(mobId) + 1;
+        int entityId = livingEntity.getId();
+        int amount = timeSpentShaking.get(entityId) + 1;
         if(amount == 100) {
-            timeSpentShaking.remove(mobId);
-            entitiesToShake.remove(mobId);
+            timeSpentShaking.remove(entityId);
+            entitiesToShake.remove(entityId);
             return true;
         }
-        timeSpentShaking.put(mobId, amount);
+        timeSpentShaking.put(entityId, amount);
         return false;
     }
 

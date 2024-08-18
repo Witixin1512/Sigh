@@ -46,8 +46,8 @@ subprojects {
             setUrl("https://repo.spongepowered.org/repository/maven-public/")
         }
         maven {
-            name = 'BlameJared Maven (JEI / CraftTweaker / Bookshelf)'
-            url = 'https://maven.blamejared.com'
+            name = 'GeckoLib'
+            url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
         }
     }
 
